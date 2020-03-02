@@ -7,9 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: cd ./lab-2-improve-code && yarn install
-      - run: cd ./lab-2-improve-code && yarn build
-      - run: cd ./lab-2-improve-code && yarn test
+      working-directory: ./lab-2-improve-code
+      - run: yarn install
+      - run: yarn build
+      - run: yarn test
         
       # - name: Codecov
       #   uses: codecov/codecov-action@v1.0.5
