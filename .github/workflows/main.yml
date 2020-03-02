@@ -1,6 +1,8 @@
 name: CI
 on:
   push:
+    paths:
+      - 'lab-2-improve-code/'
 
 jobs:
   build:
@@ -8,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: ls
-      - run: cd lab-2-improve-code/
       - run: yarn install
       - run: yarn build
       - run: yarn test
