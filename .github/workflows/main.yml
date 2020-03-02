@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      working-directory: ./lab-2-improve-code
-      - run: yarn install
+      - name: Install dependencies
+        working-directory: ./lab-2-improve-code
+        run: yarn install
+
       - run: yarn build
       - run: yarn test
         
