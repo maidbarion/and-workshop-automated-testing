@@ -35,4 +35,3 @@ jobs:
           # Repository upload token - get it from codecov.io
           token: 6d0d7df2-5ca2-4687-b1dd-9a837490a1c0
           # Path to coverage file to upload
-          file: # optional
