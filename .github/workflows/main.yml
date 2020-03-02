@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: ls
       - run: cd lab-2-improve-code
       - run: yarn install
       - run: yarn build
@@ -17,6 +18,6 @@ jobs:
         uses: codecov/codecov-action@v1.0.5
         with:
           # User defined upload name. Visible in Codecov UI
-          name: Automated Testing Workhop
+          name: Automated Testing Workshop
           # Repository upload token - get it from codecov.io
           token: 6d0d7df2-5ca2-4687-b1dd-9a837490a1c0
