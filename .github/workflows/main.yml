@@ -21,3 +21,4 @@ jobs:
           name: Automated Testing Workshop
           # Repository upload token - get it from codecov.io
           token: 6d0d7df2-5ca2-4687-b1dd-9a837490a1c0
+          
