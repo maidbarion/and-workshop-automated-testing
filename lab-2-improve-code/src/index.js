@@ -3,7 +3,7 @@ module.exports = function greeting(i = 'my friend') {
         i = [i];
     }
 
-    out = 'Hello, ';
+    out = "Hello, ";
 
     nStr = '';
     for (j in i) {

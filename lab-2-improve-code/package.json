@@ -19,5 +19,10 @@
     "start": "node src/index.js",
     "format": "eslint ./src/**/*.js --fix && prettier ./src/**/*.js --write",
     "test": "jest ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format"
+    }
   }
 }
