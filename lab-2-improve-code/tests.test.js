@@ -9,7 +9,7 @@ describe('Greeting Test', () => {
 
     describe('Requirement 2', () => {
         it("shows correct out put when in put is 'test'", () => {
-            expect(greeting('test')).not.toEqual('Hello, test.');
+            expect(greeting('test')).toEqual('Hello, test.');
         });
     });
 
