@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - run: ls
-      - run: cd lab-2-improve-code
+      - run: cd lab-2-improve-code/
       - run: yarn install
       - run: yarn build
       - run: yarn test
