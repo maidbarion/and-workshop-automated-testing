@@ -7,10 +7,23 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "jest": "^24.0.0"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "jest": "^24.0.0",
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest ."
+    "format": "eslint ./src/**/*.js --fix && prettier ./src/**/*.js --write",
+    "test": "jest . --coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format",
+      "pre-push": "yarn test"
+    }
   }
 }
