@@ -8,13 +8,24 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+      - name: Set Node.js 10.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.x
+
+      - name: Build site assets
+        working-directory: ${{ github.workspace }}
+        run: ls -la
 
       - name: Install dependencies
-        working-directory: ./lab-2-improve-code
-        run: yarn install
+        working-directory: lab-2-improve-code
+        run: |
+          yarn install
 
-      - run: yarn build
-      - run: yarn test
+      - name: Build
+        working-directory: lab-2-improve-code
+        run: |
+          yarn test build
         
       # - name: Codecov
       #   uses: codecov/codecov-action@v1.0.5
