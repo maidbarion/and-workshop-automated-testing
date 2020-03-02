@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: cd lab-2-improve-code && yarn install
+      - run: cd ../../lab-2-improve-code && yarn install
       - run: yarn build
       - run: yarn test
         
